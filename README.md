@@ -1,1 +1,1 @@
-# QA-Training
+# QA-TrainingTraining class repo
