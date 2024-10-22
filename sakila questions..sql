@@ -127,7 +127,23 @@ SELECT * FROM film;
  JOIN actor on actor.actor_id = film_actor.actor_id
  WHERE actor.last_name= 'Costner' and actor.first_name ='Fred'
  
+ ;
  -- 22. How many distinct countries are there?
+ 
+ SELECT COUNT(country)
+ FROM country
+ ;
+ -- 23. List the name of every language in reverse-alphabetical order.
+ 
+SELECT name FROM language
+ order by name desc
+ 
+ ;
+ -- 24.List the full names of every actor whose surname ends with '-son' 
+   -- in alphabetical order by their forename.
+ 
+ 
+ 
  
  
  
