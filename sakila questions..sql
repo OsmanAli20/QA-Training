@@ -97,6 +97,41 @@ SELECT release_year FROM film WHERE title='ACADEMY DINOSAUR';
  -- 17.List all movies featuring a robot.
 SELECT * FROM film WHERE description like  '%Robot%'; 
  
+-- 18. How many movies were released in 2010?
+
+SELECT * FROM film;
+ 
+ SELECT release_year from film WHERE release_year=2010;
+ 
+ -- 19. Find the titles of all the horror movies.
+ 
+ SELECT film.title, category.name
+ FROM 
+ film
+ JOIN film_category on film_category.film_id= film.film_id
+ JOIN category on category.category_id=film_category.category_id
+ WHERE category.name = 'Horror'
+
+;
+ -- 20. List the full name of the staff member with the ID of 2.
+ 
+ SELECT first_name, last_name
+ FROM staff WHERE staff_id =2;
+ 
+-- 21. List all the movies that Fred Costner has appeared in.
+ 
+ SELECT film.title,concat(actor.first_name,' ',actor.last_name) AS Full_name
+ FROM
+ film
+ JOIN film_actor on film_actor.film_id = film.film_id
+ JOIN actor on actor.actor_id = film_actor.actor_id
+ WHERE actor.last_name= 'Costner' and actor.first_name ='Fred'
+ 
+ -- 22. How many distinct countries are there?
+ 
+ 
+ 
+ 
  
  
  
